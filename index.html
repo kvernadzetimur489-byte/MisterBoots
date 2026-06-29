@@ -98,12 +98,13 @@ font-weight:bold;
 </header>
 <div class="hero">
 
-<h1>Добро пожаловать!</h1>
+
+  <h1>Добро пожаловать!</h1>
 
 <p>Футбольная экипировка под заказ.</p>
 <a href="#catalog" class="button">Перейти в каталог</a>
 </div>
-<div id="catalog" class="card">
+<div id="catalog" class="card" onclick="toggle('forms')">
 
 <h2>👕 Футбольные формы</h2>
 
@@ -111,24 +112,71 @@ font-weight:bold;
 
 <p class="price">2300 ₽</p>
 
-</div>
+<div id="forms" style="display:none;">
 
-<div class="card">
+<p>🇫🇷 Форма Франции</p>
+
+<p>🇦🇷 Форма Аргентины</p>
+
+<p>🇪🇸 Форма Испании</p>
+
+<p>🇧🇷 Форма Бразилии</p>
+</div>
+</div>
+<div class="card" onclick="toggle('boots')">
 
 <h2>👟 Бутсы</h2>
 
 <p class="price">12000 ₽</p>
 
+<div id="boots" style="display:none;">
+
+<p>Nike Mercurial</p>
+
+<p>Adidas Predator</p>
+
+<p>Puma Future</p>
+
 </div>
 
-<div class="card">
+</div>
+<div class="card" onclick="toggle('balls')">
 
 <h2>⚽ Мячи</h2>
 
 <p class="price">2770 ₽</p>
 
+<div id="balls" style="display:none;">
+
+<p>Adidas Champions League</p>
+
+<p>Nike Flight</p>
+
+<p>Puma Orbita</p>
+
+<p>Trionda</p>
+
 </div>
 
-</body>
+</div>
 
+<script>
+function toggle(id) {
+
+  var x = document.getElementById(id);
+
+  if (x.style.display === "none") {
+
+    x.style.display = "block";
+
+  } else {
+
+    x.style.display = "none";
+
+  }
+
+}
+
+</script>
+</body>
 </html>
